@@ -229,6 +229,8 @@ in
         export HOME=$PWD
         export PATH=${pkgs.virtualbox}/bin:$PATH
 
+        set -x
+
         echo "converting image to VirtualBox format..."
         VBoxManage convertfromraw $diskImage disk.vdi
 
